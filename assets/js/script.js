@@ -2,7 +2,8 @@
 // the code isn't run until the browser has finished rendering all the elements
 // in the html.
 
-
+let currentDayOfWeek = dayjs().format('dddd D, YYYY')
+$('#currentDay').text(currentDayOfWeek)
 
 
 $(function () {
