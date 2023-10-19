@@ -5,6 +5,26 @@
 let currentDayOfWeek = dayjs().format('dddd D, YYYY')
 $('#currentDay').text(currentDayOfWeek)
 
+let onSchedule = $('#description');
+let saveButton = $('#click-save')
+
+let printSchedule = function(typed) {
+  let infoEl = $('<ul>');
+  let infoDetail = typed;
+  infoEl.addClass('info-group-item').text(infoDetail);
+  infoEl.appendTo(onSchedule);
+}
+
+let handleSaveButton = function (event) {
+  event.preventDefault();
+
+  let scheduleInput = onSchedule.val();
+
+  printSchedule(scheduleInput);
+  console.log('Saved!')
+}
+
+saveButton.on('click', handleSaveButton);
 
 $(function () {
     // TODO: Add a listener for click events on the save button. This code should
