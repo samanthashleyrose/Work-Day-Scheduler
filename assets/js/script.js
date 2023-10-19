@@ -7,24 +7,48 @@ $('#currentDay').text(currentDayOfWeek)
 
 let onSchedule = $('#description');
 let saveButton = $('#click-save')
+let typed = []
 
+// Function to print the typed information in the textarea 
 let printSchedule = function(typed) {
-  let infoEl = $('<ul>');
-  let infoDetail = typed;
-  infoEl.addClass('info-group-item').text(infoDetail);
-  infoEl.appendTo(onSchedule);
+  let enteredInfoEl = $('<ul>');
+  let enteredInfoDetails = typed;
+  enteredInfoEl.addClass('info-group-item').text(enteredInfoDetails);
+  enteredInfoEl.appendTo(onSchedule);
 }
 
+// Function to printSchedule when save button is clicked
 let handleSaveButton = function (event) {
   event.preventDefault();
 
   let scheduleInput = onSchedule.val();
 
   printSchedule(scheduleInput);
-  console.log('Saved!')
+  storeSchedule();
+  console.log(typed)
+  console.log('save button pressed');
 }
 
+// Event listener for save button
 saveButton.on('click', handleSaveButton);
+
+
+// Function to run when page loads
+function saveScheduleToLocalStorage(typed) {
+  let storedText = JSON.parse(localStorage.getItem('schedule'));
+
+  if (storedText !== null) {
+    typed = storedText
+  }
+
+  printSchedule();
+}
+
+function storeSchedule() {
+  localStorage.setItem('schedule', JSON.stringify(typed));
+}
+
+saveScheduleToLocalStorage();
 
 $(function () {
     // TODO: Add a listener for click events on the save button. This code should
