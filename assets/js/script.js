@@ -2,17 +2,20 @@
 // the code isn't run until the browser has finished rendering all the elements
 // in the html.
 
-let currentDayOfWeek = dayjs().format('dddd D, YYYY')
-$('#currentDay').text(currentDayOfWeek)
+$(function () {
+  let currentDayOfWeek = dayjs().format('dddd D, YYYY');
+$('#currentDay').text(currentDayOfWeek);
 
-let onSchedule = $('#description');
-let saveButton = $('#click-save')
-let typed = []
+let saveButton = $('#click-save');
+let onSchedule = $('.description');
+let schedule
+
+const hoursArray = ['9AM','10AM','11AM','12PM','1PM','2PM','3PM','4PM','5PM',]
 
 // Function to print the typed information in the textarea 
-let printSchedule = function(typed) {
-  let enteredInfoEl = $('<ul>');
-  let enteredInfoDetails = typed;
+let printSchedule = function() {
+  let enteredInfoEl = $('<p>');
+  let enteredInfoDetails = schedule;
   enteredInfoEl.addClass('info-group-item').text(enteredInfoDetails);
   enteredInfoEl.appendTo(onSchedule);
 }
@@ -23,34 +26,29 @@ let handleSaveButton = function (event) {
 
   let scheduleInput = onSchedule.val();
 
-  printSchedule(scheduleInput);
+  printSchedule();
   storeSchedule();
-  console.log(typed)
+  console.log(scheduleInput)
   console.log('save button pressed');
 }
 
 // Event listener for save button
 saveButton.on('click', handleSaveButton);
 
-
 // Function to run when page loads
-function saveScheduleToLocalStorage(typed) {
-  let storedText = JSON.parse(localStorage.getItem('schedule'));
-
-  if (storedText !== null) {
-    typed = storedText
-  }
+function getFromLocalStorage() {
+  schedule = JSON.parse(localStorage.getItem('schedule'));
+  
+console.log(schedule);
 
   printSchedule();
 }
 
 function storeSchedule() {
-  localStorage.setItem('schedule', JSON.stringify(typed));
+  localStorage.setItem('schedule', JSON.stringify(onSchedule));
 }
 
-saveScheduleToLocalStorage();
-
-$(function () {
+getFromLocalStorage();
     // TODO: Add a listener for click events on the save button. This code should
     // use the id in the containing time-block as a key to save the user input in
     // local storage. HINT: What does `this` reference in the click listener
