@@ -31,24 +31,15 @@
       <p id="currentDay" class="lead"></p>
     </header>
     <section class="container-fluid p-5">
-      <!-- Use class for "past", "present", and "future" to apply styles to the
-        time-block divs accordingly. The javascript will need to do this by
-        adding/removing these classes on each div by comparing the hour in the
-        id to the current hour. The html provided below is meant to be an example
-        demonstrating how the css provided can be leveraged to create the
-        desired layout and colors. The html below should be removed or updated
-        in the finished product. Remember to delete this comment once the
-        code is implemented.
-        -->
 
       <!-- Example of a past time block. The "past" class adds a gray background color. -->
       <div id="hour-9" class="row time-block past">
         <div class="col-2 col-md-1 hour text-center py-3">9AM</div>
         <textarea class="col-8 col-md-9 description" id="9AM" rows="4"> </textarea>
-        <button class="btn saveBtn col-1" aria-label="save" id="click-save">
+        <button class="btn saveBtn col-1" aria-label="save" class="click-save">
           <i class="fas fa-save" aria-hidden="true"></i>
         </button>
-        <button class="btn deleteBtn col-1" aria-label="delete" id="click-delete">
+        <button class="btn deleteBtn col-1" aria-label="delete" class="click-delete">
           <i class="bi bi-trash" aria-hidden="true"></i>
           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16">
             <path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5Zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5Zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6Z"/>
@@ -61,10 +52,10 @@
       <div id="hour-10" class="row time-block present">
         <div class="col-2 col-md-1 hour text-center">10AM</div>
         <textarea class="col-8 col-md-9 description" id="10AM" rows="4"> </textarea>
-        <button class="btn saveBtn col-1" aria-label="save" id="click-save">
+        <button class="btn saveBtn col-1" aria-label="save" class="click-save">
           <i class="fas fa-save" aria-hidden="true"></i>
         </button>
-        <button class="btn deleteBtn col-1" aria-label="delete" id="click-delete">
+        <button class="btn deleteBtn col-1" aria-label="delete" class="click-delete">
           <i class="bi bi-trash" aria-hidden="true"></i>
           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16">
             <path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5Zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5Zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6Z"/>
@@ -77,10 +68,10 @@
       <div id="hour-11" class="row time-block future">
         <div class="col-2 col-md-1 hour text-center">11AM</div>
         <textarea class="col-8 col-md-9 description" rows="4"> </textarea>
-        <button class="btn saveBtn col-1" aria-label="save" id="click-save">
+        <button class="btn saveBtn col-1" aria-label="save" class="click-save">
           <i class="fas fa-save" aria-hidden="true"></i>
         </button>
-        <button class="btn deleteBtn col-1" aria-label="delete" id="click-delete">
+        <button class="btn deleteBtn col-1" aria-label="delete" class="click-delete">
           <i class="bi bi-trash" aria-hidden="true"></i>
           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16">
             <path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5Zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5Zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6Z"/>
@@ -92,10 +83,10 @@
       <div id="hour-12" class="row time-block future">
         <div class="col-2 col-md-1 hour text-center">12PM</div>
         <textarea class="col-8 col-md-9 description" rows="4"> </textarea>
-        <button class="btn saveBtn col-1" aria-label="save" id="click-save">
+        <button class="btn saveBtn col-1" aria-label="save" class="click-save">
           <i class="fas fa-save" aria-hidden="true"></i>
         </button>
-        <button class="btn deleteBtn col-1" aria-label="delete" id="click-delete">
+        <button class="btn deleteBtn col-1" aria-label="delete" class="click-delete">
           <i class="bi bi-trash" aria-hidden="true"></i>
           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16">
             <path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5Zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5Zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6Z"/>
@@ -107,10 +98,10 @@
       <div id="hour-1" class="row time-block future">
         <div class="col-2 col-md-1 hour text-center">1PM</div>
         <textarea class="col-8 col-md-9 description" rows="4"> </textarea>
-        <button class="btn saveBtn col-1" aria-label="save" id="click-save">
+        <button class="btn saveBtn col-1" aria-label="save" class="click-save">
           <i class="fas fa-save" aria-hidden="true"></i>
         </button>
-        <button class="btn deleteBtn col-1" aria-label="delete" id="click-delete">
+        <button class="btn deleteBtn col-1" aria-label="delete" class="click-delete">
           <i class="bi bi-trash" aria-hidden="true"></i>
           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16">
             <path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5Zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5Zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6Z"/>
@@ -122,10 +113,10 @@
       <div id="hour-2" class="row time-block future">
         <div class="col-2 col-md-1 hour text-center">2PM</div>
         <textarea class="col-8 col-md-9 description" rows="4"> </textarea>
-        <button class="btn saveBtn col-1" aria-label="save" id="click-save">
+        <button class="btn saveBtn col-1" aria-label="save" class="click-save">
           <i class="fas fa-save" aria-hidden="true"></i>
         </button>
-        <button class="btn deleteBtn col-1" aria-label="delete" id="click-delete">
+        <button class="btn deleteBtn col-1" aria-label="delete" class="click-delete">
           <i class="bi bi-trash" aria-hidden="true"></i>
           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16">
             <path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5Zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5Zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6Z"/>
@@ -137,10 +128,10 @@
       <div id="hour-3" class="row time-block future">
         <div class="col-2 col-md-1 hour text-center">3PM</div>
         <textarea class="col-8 col-md-9 description" rows="4"> </textarea>
-        <button class="btn saveBtn col-1" aria-label="save" id="click-save">
+        <button class="btn saveBtn col-1" aria-label="save" class="click-save">
           <i class="fas fa-save" aria-hidden="true"></i>
         </button>
-        <button class="btn deleteBtn col-1" aria-label="delete" id="click-delete">
+        <button class="btn deleteBtn col-1" aria-label="delete" class="click-delete">
           <i class="bi bi-trash" aria-hidden="true"></i>
           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16">
             <path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5Zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5Zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6Z"/>
@@ -152,10 +143,10 @@
       <div id="hour-4" class="row time-block future">
         <div class="col-2 col-md-1 hour text-center">4PM</div>
         <textarea class="col-8 col-md-9 description" rows="4"> </textarea>
-        <button class="btn saveBtn col-1" aria-label="save" id="click-save">
+        <button class="btn saveBtn col-1" aria-label="save" class="click-save">
           <i class="fas fa-save" aria-hidden="true"></i>
         </button>
-        <button class="btn deleteBtn col-1" aria-label="delete" id="click-delete">
+        <button class="btn deleteBtn col-1" aria-label="delete" class="click-delete">
           <i class="bi bi-trash" aria-hidden="true"></i>
           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16">
             <path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5Zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5Zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6Z"/>
@@ -167,10 +158,10 @@
       <div id="hour-5" class="row time-block future">
         <div class="col-2 col-md-1 hour text-center">5PM</div>
         <textarea class="col-8 col-md-9 description" rows="4"> </textarea>
-        <button class="btn saveBtn col-1" aria-label="save" id="click-save">
+        <button class="btn saveBtn col-1" aria-label="save" class="click-save">
           <i class="fas fa-save" aria-hidden="true"></i>
         </button>
-        <button class="btn deleteBtn col-1" aria-label="delete" id="click-delete">
+        <button class="btn deleteBtn col-1" aria-label="delete" class="click-delete">
           <i class="bi bi-trash" aria-hidden="true"></i>
           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16">
             <path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5Zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5Zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6Z"/>

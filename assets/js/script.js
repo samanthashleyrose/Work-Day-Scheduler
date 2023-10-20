@@ -7,7 +7,8 @@ $(function () {
   let currentDayOfWeek = dayjs().format('dddd D, YYYY');
   $('#currentDay').text(currentDayOfWeek);
 
-  let saveButton = $('#click-save');
+  let saveButton = $('.click-save');
+  let deleteButton = $('.click-delete');
   let onSchedule = $('.description');
   let schedule = [];
 
