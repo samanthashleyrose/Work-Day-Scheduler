@@ -4,11 +4,11 @@
 
 $(function () {
   let currentDayOfWeek = dayjs().format('dddd D, YYYY');
-$('#currentDay').text(currentDayOfWeek);
+  $('#currentDay').text(currentDayOfWeek);
 
 let saveButton = $('#click-save');
 let onSchedule = $('.description');
-let schedule
+let schedule = [];
 
 const hoursArray = ['9AM','10AM','11AM','12PM','1PM','2PM','3PM','4PM','5PM',]
 
@@ -49,7 +49,10 @@ function storeSchedule() {
 }
 
 getFromLocalStorage();
-    // TODO: Add a listener for click events on the save button. This code should
+
+});
+
+      // TODO: Add a listener for click events on the save button. This code should
     // use the id in the containing time-block as a key to save the user input in
     // local storage. HINT: What does `this` reference in the click listener
     // function? How can DOM traversal be used to get the "hour-x" id of the
@@ -67,4 +70,3 @@ getFromLocalStorage();
     // attribute of each time-block be used to do this?
     //
     // TODO: Add code to display the current date in the header of the page.
-  });
