@@ -12,10 +12,20 @@ $(function () {
   let onSchedule = $('.description');
   let schedule = [];
 
-  const hoursArray = ['9AM','10AM','11AM','12PM','1PM','2PM','3PM','4PM','5PM'];
+  const hour9AM = $('#9AM');
+  const hour10AM = $('#10AM');
+  const hour11AM = $('#11AM');
+  const hour12PM = $('#12PM');
+  const hour1PM = $('#1PM');
+  const hour2PM = $('#2PM');
+  const hour3PM = $('#3PM');
+  const hour4PM = $('#4PM');
+  const hour5PM = $('#5PM');
 
   // Function to print the typed information in the textarea 
   let printSchedule = function() {
+
+    const hoursArray = [{hour9AM, hour10AM, hour11AM, hour12PM, hour1PM, hour2PM, hour3PM, hour4PM, hour5PM}]
 
     for (let i = 0; i < schedule.length; i++) {
       let enteredInfoEl = $('<p>');
