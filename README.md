@@ -9,7 +9,13 @@ Provide a short description explaining the what, why, and how of your project. U
 - What problem does it solve?
 - What did you learn?
 
-a simple calendar application that allows a user to save events for each hour of a typical working day
+A work day can move by in the blink of an eye, having an organized schedule can make it easiert to manage your day. The Work Day Scheduler is a simple calendar application that allows a user to save events for each hour of a typical working day. Throughout the application's build, I learned the importance of:
+
+- JQuery
+    - sdfs
+- DayJS
+- Bootstrap
+
 
 ## Table of Contents
 
@@ -40,11 +46,18 @@ If your project has a lot of features, list them here.
 
 ## Credits
 
-List your collaborators, if any, with links to their GitHub profiles.
+#### Knowledge Assitance From:
+<li>Lee Warrick <link><a href="https://leewarrick.com/">Personal Portfolio</a></link></li>
+<li>Mia Ciasullo <link><a href="https://github.com/miacias">GitHub Portfolio</a></link></li>
 
-If you used any third-party assets that require attribution, list the creators with links to their primary web presence in this section.
+#### Documentation Used:
 
-If you followed tutorials, include links to those here as well.
+<li><link><a href="https://day.js.org/docs/en/get-set/day">Day.js</a></link></li>
+<li><link><a href="https://jquery.com/">JQuery</a></link></li>
+<li><link><a href="https://icons.getbootstrap.com/icons/trash/">Bootstrap</a></link></li>
+<li><link><a href="https://chat.openai.com/">ChatGPT</a></link></li>
+<li><link><a href="https://www.w3schools.com/jsref/jsref_parseint.asp">W3schools JavaScript parseInt()</a></link></li>
+<li><link><a href="https://www.w3schools.com/js/js_this.asp">W3schools JavaScript 'this' keyword</a></link></li>
 
 ## License
 
