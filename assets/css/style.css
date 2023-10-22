@@ -45,7 +45,7 @@ body {
     color: white;
   }
   
-  .saveBtn {
+  .click-save {
     border-left: 1px solid black;
     border-top-right-radius: 15px;
     border-bottom-right-radius: 15px;
@@ -53,7 +53,7 @@ body {
     color: white;
   }
 
-  .deleteBtn {
+  .click-delete {
     border-left: 1px solid black;
     border-top-right-radius: 15px;
     border-bottom-right-radius: 15px;

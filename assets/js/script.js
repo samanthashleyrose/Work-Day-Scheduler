@@ -1,92 +1,78 @@
-// Wrap all code that interacts with the DOM in a call to jQuery to ensure that
-// the code isn't run until the browser has finished rendering all the elements
-// in the html.
+// Code is wrapped in a call to jQuery to ensure that the code isn't run until the browser has finished rendering all the elements in the html.
 
 $(function () {
 
+  // Dets the date in the header to be the current day
   let currentDayOfWeek = dayjs().format('dddd D, YYYY');
   $('#currentDay').text(currentDayOfWeek);
 
-  let saveButton = $('.click-save');
-  let deleteButton = $('.click-delete');
-  let onSchedule = $('.description');
-  let schedule = [];
+  // Global varibales
+  let saveButtons = $('.click-save');
+  let deleteButtons = $('.click-delete');
+  let textAreas = $('.description');
+  // Hours array
+  const hours = ['9AM', '10AM', '11AM', '12PM', '1PM', '2PM', '3PM', '4PM', '5PM','10PM', '11PM'];
 
-  const hour9AM = $('#9AM');
-  const hour10AM = $('#10AM');
-  const hour11AM = $('#11AM');
-  const hour12PM = $('#12PM');
-  const hour1PM = $('#1PM');
-  const hour2PM = $('#2PM');
-  const hour3PM = $('#3PM');
-  const hour4PM = $('#4PM');
-  const hour5PM = $('#5PM');
-
-  // Function to print the typed information in the textarea 
-  let printSchedule = function() {
-
-    const hoursArray = [{hour9AM, hour10AM, hour11AM, hour12PM, hour1PM, hour2PM, hour3PM, hour4PM, hour5PM}]
-
-    for (let i = 0; i < schedule.length; i++) {
-      let enteredInfoEl = $('<p>');
-      enteredInfoEl.addClass('info-group-item').text(schedule[i]);
-      enteredInfoEl.appendTo(onSchedule);
-    }
+  // Loads scheduled activities from local storage and populates the textareas
+  function loadSchedule() {
+    hours.forEach((hour) => {
+      let savedText = localStorage.getItem(hour);
+      const textArea = $(`#${hour}`);
+      textArea.val(savedText);
+    });
   }
+  // Save the event text to local storage
+  function saveScheduleToLocalStorage(hour, text) {
+    localStorage.setItem(hour, text);
+  };
 
-  // Function to printSchedule when save button is clicked
-  let handleSaveButton = function (event) {
+  // Event listener for save buttons
+  saveButtons.on('click', function (event) {
     event.preventDefault();
+    console.log('Save Button Clicked');
 
-    let scheduleInput = onSchedule.val();
+    // Breakdown of code below:
+    // 'this' refers to the specific save button that was clicked.
+    // .siblings selects elements with the class "description" that are siblings of the clicked button.
+    // .attr('id') retrieves the 'id' attribute of that element.
+    // .val retrieves the value of the input element
+    const hour = $(this).siblings('.description').attr('id');
+    const text = $(this).siblings('.description').val();
 
-    if (scheduleInput.trim() !== '') {
-      schedule.push(scheduleInput);
+    saveScheduleToLocalStorage(hour, text);
+  });
 
-      storeScheduleToLocalStorage();
-      printSchedule();
-      onSchedule.val('')
-      console.log(scheduleInput)
-      console.log('save button pressed');
-    }
+  // Event listener for delete buttons
+  deleteButtons.on('click', function (event) {
+    event.preventDefault();
+    console.log('Delete Button Clicked');
+
+    // Makes the value of the selected textarea an empty string ''
+    const hour = $(this).siblings('.description').attr('id');
+    const text = $(this).siblings('.description').val('');
+
+    // Removes saved item from local storage
+    localStorage.removeItem(hour,text);
+    });
+
+  // Updates the color of the hour block based off the current time of day
+  function updatePastPresentFuture() {
+    const currentHour = dayjs().format('H'); // Accesses the current hour of the day
+
+    textAreas.each(function() {
+      const hour = parseInt($(this).attr('id')); // 'this' accesses the specific element being processed and retrieves its 'id' attribute which is parsed to return the first integer
+
+      // 'this' is a reference to the current textArea element as you iterate over them. Works with each textArea individually and makes changes to them based on their attributes
+      if (hour < currentHour){
+        $(this).parent().removeClass('present future').addClass('past');
+      } else if (hour === currentHour) {
+        $(this).parent().removeClass('past future').addClass('present');
+      } else {
+        $(this).parent().removeClass('past present').addClass('future');
+      }
+    });
   }
-
-  // Event listener for save button
-  saveButton.on('click', handleSaveButton);
-
-  // Function to run when page loads
-  function getFromLocalStorage() {
-    let storedText = JSON.parse(localStorage.getItem('schedule'));
   
-    if (storedText !== null) {
-      schedule = storedText;
-      printSchedule();
-    }
-  }
-
-  function storeScheduleToLocalStorage() {
-    localStorage.setItem('schedule', JSON.stringify(schedule));
-  }
-
-  getFromLocalStorage();
-
-});
-
-      // TODO: Add a listener for click events on the save button. This code should
-    // use the id in the containing time-block as a key to save the user input in
-    // local storage. HINT: What does `this` reference in the click listener
-    // function? How can DOM traversal be used to get the "hour-x" id of the
-    // time-block containing the button that was clicked? How might the id be
-    // useful when saving the description in local storage?
-    //
-    // TODO: Add code to apply the past, present, or future class to each time
-    // block by comparing the id to the current hour. HINTS: How can the id
-    // attribute of each time-block be used to conditionally add or remove the
-    // past, present, and future classes? How can Day.js be used to get the
-    // current hour in 24-hour time?
-    //
-    // TODO: Add code to get any user input that was saved in localStorage and set
-    // the values of the corresponding textarea elements. HINT: How can the id
-    // attribute of each time-block be used to do this?
-    //
-    // TODO: Add code to display the current date in the header of the page.
+  loadSchedule();
+  updatePastPresentFuture();
+  });
