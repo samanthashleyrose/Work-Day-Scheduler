@@ -2,7 +2,7 @@
 
 $(function () {
 
-  // Dets the date in the header to be the current day
+  // Sets the date in the header to be the current day
   let currentDayOfWeek = dayjs().format('dddd D, YYYY');
   $('#currentDay').text(currentDayOfWeek);
 
