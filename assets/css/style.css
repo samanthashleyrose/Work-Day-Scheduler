@@ -3,70 +3,70 @@ body {
     font-size: 16px;
   }
   
-  textarea {
-    background: transparent;
-    border: none;
-    resize: none;
-    color: #000000;
-    border-left: 1px solid black;
-    padding: 10px;
-  }
+textarea {
+  background: transparent;
+  border: none;
+  resize: none;
+  color: #000000;
+  border-left: 1px solid black;
+  padding: 10px;
+}
   
-  .description {
-    white-space: pre-wrap;
-  }
+.description {
+   white-space: pre-wrap;
+}
   
-  .time-block {
-    border-radius: 15px;
-  }
+.time-block {
+  border-radius: 15px;
+}
   
-  .row {
-    border-top: 1px solid white;
-  }
+.row {
+  border-top: 1px solid white;
+}
   
-  .hour {
-    background-color: #ffffff;
-    color: #000000;
-    border-top: 1px dashed #000000;
-  }
+.hour {
+  background-color: #ffffff;
+  color: #000000;
+  border-top: 1px dashed #000000;
+}
   
-  .past {
-    background-color: #62c0bb6d;
-    color: white;
-  }
+.past {
+  background-color: #62c0bb6d;
+  color: black;
+}
   
-  .present {
-    background-color: #62c0bb;
-    color: white;
-  }
+.present {
+  background-color: #62c0bb;
+  color: black;
+}
   
-  .future {
-    background-color: #478d8a;
-    color: white;
-  }
+.future {
+  background-color: #478d8a;
+  color: black;
+}
   
-  .click-save {
-    border-left: 1px solid black;
-    border-top-right-radius: 15px;
-    border-bottom-right-radius: 15px;
-    background-color: #40ab69;
-    color: white;
-  }
+.click-save {
+  border-left: 1px solid black;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  background-color: #40ab69;
+  color: white;
+}
 
-  .click-delete {
-    border-left: 1px solid black;
-    border-top-right-radius: 15px;
-    border-bottom-right-radius: 15px;
-    background-color: #dc5245;
-    color: white;
-  }
-  
-  .saveBtn i:hover {
-    font-size: 20px;
-    transition: all 0.3s ease-in-out;
-  }
+.click-delete {
+  border-left: 1px solid black;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  background-color: #dc5245;
+  color: white;
+}
 
-  .deleteBtn i:hover {
-    font-size: 20px;
-    transition: all 0.3s ease-in-out;
-  }
+button:active {
+  transform: translateX(-10px);
+  transition: 100ms;
+}
+
+button:hover {
+  font-size: 20px;
+  transition: all 0.3s ease-in-out;
+}
