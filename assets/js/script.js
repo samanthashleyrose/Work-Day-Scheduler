@@ -1,4 +1,4 @@
-// Code is wrapped in a call to jQuery to ensure that the code isn't run until the browser has finished rendering all the elements in the html.
+// Code is wrapped in a call to jQuery to ensure that the code isn't run until the browser has finished rendering all the elements in the HTML
 
 $(function () {
 
@@ -10,7 +10,7 @@ $(function () {
   let saveButtons = $('.click-save');
   let deleteButtons = $('.click-delete');
   let textAreas = $('.description');
-  // Hours array
+  // Hours array - Military time
   const hours = ['9AM', '10AM', '11AM', '12PM', '13PM', '14PM', '15PM', '16PM', '17PM'];
 
   // Loads scheduled activities from local storage and populates the textareas
@@ -32,10 +32,10 @@ $(function () {
     console.log('Save Button Clicked');
 
     // Breakdown of code below:
-    // 'this' refers to the specific save button that was clicked.
-    // .siblings selects elements with the class "description" that are siblings of the clicked button.
-    // .attr('id') retrieves the 'id' attribute of that element.
-    // .val retrieves the value of the input element
+    // 'this' refers to the specific save button that was clicked
+    // .siblings selects the textarea with the class "description" that is the sibling of the clicked button
+    // .attr('id') retrieves the 'id' attribute of that element
+    // .val retrieves the value of the textarea
     const hour = $(this).siblings('.description').attr('id');
     const text = $(this).siblings('.description').val();
 
@@ -55,9 +55,9 @@ $(function () {
     localStorage.removeItem(hour,text);
     });
 
-  // Updates the color of the hour block based off the current time of day
+  // Updates the color of the time blocks based off the current time of day
   function updatePastPresentFuture() {
-    const currentHour = dayjs().format('H'); // Accesses the current hour of the day - 24 hour timeframe
+    const currentHour = dayjs().format('H'); // Accesses the current hour of the day - Military time
 
     textAreas.each(function() {
       const textareaHour = parseInt($(this).attr('id')); // textareas 'id' is parsed to return the first integer
