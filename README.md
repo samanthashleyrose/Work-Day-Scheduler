@@ -2,24 +2,16 @@
 
 ## Description
 
-Provide a short description explaining the what, why, and how of your project. Use the following questions as a guide:
+A work day can move by in the blink of an eye, having an organized schedule can make it easier to manage your day. The Work Day Scheduler is a simple calendar application that allows you to quickly and efficiently create a layout of a typical working day. Throughout the application's build, I learned the importance of:
 
-- What was your motivation?
-- Why did you build this project? (Note: the answer is not "Because it was a homework assignment.")
-- What problem does it solve?
-- What did you learn?
-
-A work day can move by in the blink of an eye, having an organized schedule can make it easiert to manage your day. The Work Day Scheduler is a simple calendar application that allows a user to save events for each hour of a typical working day. Throughout the application's build, I learned the importance of:
-
-- JQuery
-    - sdfs
-- DayJS
+- jQuery
+    - Having a simplified JavaScript library allowed for an easier creation process. DOM manipulations and Event Handling came especially in handy. Being able to access elements with ease was paramount. Also, by wrapping all the code in a call to jQuery ensures that the code won't run until the browser has finished rendering all the elements in the HTML.
+- Day.js
+    - Calendars specifically revolve around dates and times. Day.js makes the process of collecting active information about dates/times more efficient. Using the open-source library, I was able to set the current date at the top of the page and use the current hour to control the color of the time blocks. 
 - Bootstrap
-
+    - The starter code came with a basic layout of the HTML and CSS using Bootstrap. By reading through the Bootstrap material and easily locating my wants/needs, I was able to gently modify the content to have my desired design. 
 
 ## Table of Contents
-
-If your README is long, add a table of contents to make it easy for users to find what they need.
 
 - [Installation](#installation)
 - [Usage](#usage)
@@ -28,21 +20,11 @@ If your README is long, add a table of contents to make it easy for users to fin
 
 ## Installation
 
-What are the steps required to install your project? Provide a step-by-step description of how to get the development environment running.
+No installation necessary!
 
 ## Usage
 
-Provide instructions and examples for use. Include screenshots as needed.
-
-To add a screenshot, create an `assets/images` folder in your repository and upload your screenshot to it. Then, using the relative filepath, add it to your README using the following syntax:
-
-    ```md
-    ![alt text](assets/images/screenshot.png)
-    ```
-
-## Features
-
-If your project has a lot of features, list them here.
+Open the application by following the deployed link (insert link here) then add your schedule for the day! Each hour is color coded for your convivence; 'past' is a faded light blue, 'present' is a solid light blue, and 'future' is a darker teal. When adding information to each time block, make sure to click the save button so your schedule will save to local storage. Go ahead and reload the page to see that your schedule has been saved! If you need to make any changes, click the delete button to remove the saved information from local storage.
 
 ## Credits
 
