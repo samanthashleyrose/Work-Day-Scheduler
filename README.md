@@ -26,6 +26,8 @@ No installation necessary!
 
 Open the application by following the deployed link (<link><a href="https://samanthashleyrose.github.io/module05-challenge/">Work Day Scheduler</a></link>) then add your schedule for the day! Each hour is color coded for your convivence; 'past' is a faded light blue, 'present' is a solid light blue, and 'future' is a darker teal. When adding information to each time block, make sure to click the save button so your schedule will save to local storage. Go ahead and reload the page to see that your schedule has been saved! If you need to make any changes, click the delete button to remove the saved information from local storage.
 
+https://github.com/samanthashleyrose/module05-challenge/assets/142939966/0e3f1975-7436-47c2-a0ba-65afeebb4831
+
 ## Credits
 
 #### Knowledge Assitance From:
@@ -41,9 +43,6 @@ Open the application by following the deployed link (<link><a href="https://sama
 <li><link><a href="https://fonts.google.com/specimen/Merriweather?preview.text=Work%20Day%20Scheduler">Google Fonts</a></link></li>
 <li><link><a href="https://www.w3schools.com/jsref/jsref_parseint.asp">W3schools JavaScript parseInt()</a></link></li>
 <li><link><a href="https://www.w3schools.com/js/js_this.asp">W3schools JavaScript 'this' keyword</a></link></li>
-
-
-
 
 ## License
 
