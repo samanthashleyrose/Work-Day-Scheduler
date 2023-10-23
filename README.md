@@ -10,7 +10,7 @@ A work day can move by in the blink of an eye, having an organized schedule can 
     - Calendars specifically revolve around dates and times. Day.js makes the process of collecting active information about dates/times more efficient. Using the open-source library, I was able to set the current date at the top of the page and use the current hour to control the color of the time blocks. 
 - Bootstrap
     - The starter code came with a basic layout of the HTML and CSS using Bootstrap. By reading through the Bootstrap material and easily locating my wants/needs, I was able to gently modify the content to have my desired design. 
-
+    
 ## Table of Contents
 
 - [Installation](#installation)
