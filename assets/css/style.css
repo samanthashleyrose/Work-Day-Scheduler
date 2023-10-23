@@ -1,7 +1,25 @@
 /* GENERAL STYLING */
 body {
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Merriweather', sans-serif;
     font-size: 16px;
+}
+
+/* HEADER */
+header {
+  text-align: center;
+  border-bottom: 4px;
+  border-top: 0px;
+  border-right: 0px;
+  border-left: 0px;
+  border-style: dotted;
+}
+
+#subtitle {
+  font-size: 1.05rem;
+}
+
+#currentDay {
+  padding-bottom: 3%;
 }
 
 /* CONTAINER STYLING */
