@@ -34,13 +34,15 @@ https://github.com/samanthashleyrose/module05-challenge/assets/142939966/0e3f197
 <li>Lee Warrick <link><a href="https://leewarrick.com/">Personal Portfolio</a></link></li>
 <li>Mia Ciasullo <link><a href="https://github.com/miacias">GitHub Portfolio</a></link></li>
 
-#### Documentation Used:
-
+#### Technologies Used:
 <li><link><a href="https://day.js.org/docs/en/get-set/day">Day.js</a></link></li>
 <li><link><a href="https://jquery.com/">JQuery</a></link></li>
 <li><link><a href="https://icons.getbootstrap.com/icons/trash/">Bootstrap</a></link></li>
 <li><link><a href="https://chat.openai.com/">ChatGPT</a></link></li>
 <li><link><a href="https://fonts.google.com/specimen/Merriweather?preview.text=Work%20Day%20Scheduler">Google Fonts</a></link></li>
+
+#### Documentation Used:
+
 <li><link><a href="https://developer.mozilla.org/en-US/docs/Web/API/Event">MDN Web Docs Event</a></link></li>
 <li><link><a href="https://www.w3schools.com/jsref/jsref_parseint.asp">W3schools JavaScript parseInt()</a></link></li>
 <li><link><a href="https://www.w3schools.com/js/js_this.asp">W3schools JavaScript 'this' keyword</a></link></li>
