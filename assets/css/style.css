@@ -1,8 +1,25 @@
+/* GENERAL STYLING */
 body {
     font-family: 'Open Sans', sans-serif;
     font-size: 16px;
-  }
+}
+
+/* CONTAINER STYLING */
+.row {
+  border-top: 1px solid white;
+}
+.time-block {
+  border-radius: 15px;
+}
+
+/* HOUR COLUMN */
+.hour {
+  background-color: #ffffff;
+  color: #000000;
+  border-top: 1px dashed #000000;
+}
   
+/* TEXT AREAS */
 textarea {
   background: transparent;
   border: none;
@@ -16,20 +33,7 @@ textarea {
    white-space: pre-wrap;
 }
   
-.time-block {
-  border-radius: 15px;
-}
-  
-.row {
-  border-top: 1px solid white;
-}
-  
-.hour {
-  background-color: #ffffff;
-  color: #000000;
-  border-top: 1px dashed #000000;
-}
-  
+/* COLORS FOR TIME BLOCKS */
 .past {
   background-color: #62c0bb6d;
   color: black;
@@ -44,7 +48,18 @@ textarea {
   background-color: #478d8a;
   color: black;
 }
-  
+
+/* BUTTONS */
+button:active {
+  transform: translateX(-10px);
+  transition: 100ms;
+}
+
+button:hover {
+  font-size: 20px;
+  transition: all 0.3s ease-in-out;
+}
+
 .click-save {
   border-left: 1px solid black;
   border-top-right-radius: 15px;
@@ -59,14 +74,4 @@ textarea {
   border-bottom-right-radius: 15px;
   background-color: #dc5245;
   color: white;
-}
-
-button:active {
-  transform: translateX(-10px);
-  transition: 100ms;
-}
-
-button:hover {
-  font-size: 20px;
-  transition: all 0.3s ease-in-out;
 }
