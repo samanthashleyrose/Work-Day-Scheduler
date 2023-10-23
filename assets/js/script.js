@@ -11,7 +11,7 @@ $(function () {
   let deleteButtons = $('.click-delete');
   let textAreas = $('.description');
   // Hours array
-  const hours = ['9AM', '10AM', '11AM', '12PM', '1PM', '2PM', '3PM', '4PM', '5PM','10PM', '11PM'];
+  const hours = ['9AM', '10AM', '11AM', '12PM', '13PM', '14PM', '15PM', '16PM', '17PM'];
 
   // Loads scheduled activities from local storage and populates the textareas
   function loadSchedule() {
@@ -57,18 +57,18 @@ $(function () {
 
   // Updates the color of the hour block based off the current time of day
   function updatePastPresentFuture() {
-    const currentHour = dayjs().format('H'); // Accesses the current hour of the day
+    const currentHour = dayjs().format('H'); // Accesses the current hour of the day - 24 hour timeframe
 
     textAreas.each(function() {
-      const hour = parseInt($(this).attr('id')); // 'this' accesses the specific element being processed and retrieves its 'id' attribute which is parsed to return the first integer
+      const textareaHour = parseInt($(this).attr('id')); // textareas 'id' is parsed to return the first integer
 
-      // 'this' is a reference to the current textArea element as you iterate over them. Works with each textArea individually and makes changes to them based on their attributes
-      if (hour < currentHour){
-        $(this).parent().removeClass('present future').addClass('past');
-      } else if (hour === currentHour) {
-        $(this).parent().removeClass('past future').addClass('present');
-      } else {
-        $(this).parent().removeClass('past present').addClass('future');
+      // 'this' compares each textarea individually to the currrent hour and makes changes to them based on their 'id'
+      if (textareaHour < currentHour){
+        $(this).addClass('past');
+      } else if (textareaHour == currentHour) {
+        $(this).addClass('present');
+      } else if (textareaHour > currentHour) {
+        $(this).addClass('future');
       }
     });
   }
