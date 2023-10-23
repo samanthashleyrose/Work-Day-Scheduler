@@ -38,8 +38,12 @@ Open the application by following the deployed link (insert link here) then add 
 <li><link><a href="https://jquery.com/">JQuery</a></link></li>
 <li><link><a href="https://icons.getbootstrap.com/icons/trash/">Bootstrap</a></link></li>
 <li><link><a href="https://chat.openai.com/">ChatGPT</a></link></li>
+<li><link><a href="https://fonts.google.com/specimen/Merriweather?preview.text=Work%20Day%20Scheduler">Google Fonts</a></link></li>
 <li><link><a href="https://www.w3schools.com/jsref/jsref_parseint.asp">W3schools JavaScript parseInt()</a></link></li>
 <li><link><a href="https://www.w3schools.com/js/js_this.asp">W3schools JavaScript 'this' keyword</a></link></li>
+
+
+
 
 ## License
 
