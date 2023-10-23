@@ -41,9 +41,10 @@ https://github.com/samanthashleyrose/module05-challenge/assets/142939966/0e3f197
 <li><link><a href="https://icons.getbootstrap.com/icons/trash/">Bootstrap</a></link></li>
 <li><link><a href="https://chat.openai.com/">ChatGPT</a></link></li>
 <li><link><a href="https://fonts.google.com/specimen/Merriweather?preview.text=Work%20Day%20Scheduler">Google Fonts</a></link></li>
+<li><link><a href="https://developer.mozilla.org/en-US/docs/Web/API/Event">MDN Web Docs Event</a></link></li>
 <li><link><a href="https://www.w3schools.com/jsref/jsref_parseint.asp">W3schools JavaScript parseInt()</a></link></li>
 <li><link><a href="https://www.w3schools.com/js/js_this.asp">W3schools JavaScript 'this' keyword</a></link></li>
-
+<li><link><a href="https://www.freecodecamp.org/news/data-structures-in-javascript-with-examples/">Free Code Camp - Data Structures in JavaScript</a></link></li>
 ## License
 
 Please refer to the MIT LICENSE in the repo.
