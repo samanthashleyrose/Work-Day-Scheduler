@@ -2,7 +2,7 @@
 
 ## Description
 
-A work day can move by in the blink of an eye, having an organized schedule can make it easier to manage your day. The Work Day Scheduler is a simple calendar application that allows you to quickly and efficiently create a layout of a typical working day. Throughout the application's build, I learned the importance of:
+A work day can move by in the blink of an eye, having an organized schedule can make it easier to manage your day. The <link><a href="https://samanthashleyrose.github.io/module05-challenge/">Work Day Scheduler</a></link> is a simple calendar application that allows you to quickly and efficiently create a layout of a typical working day. Throughout the application's build, I learned the importance of:
 
 - jQuery
     - Having a simplified JavaScript library allowed for an easier creation process. DOM manipulations and Event Handling came especially in handy. Being able to access elements with ease was paramount. Also, by wrapping all the code in a call to jQuery ensures that the code won't run until the browser has finished rendering all the elements in the HTML.
@@ -24,7 +24,7 @@ No installation necessary!
 
 ## Usage
 
-Open the application by following the deployed link (insert link here) then add your schedule for the day! Each hour is color coded for your convivence; 'past' is a faded light blue, 'present' is a solid light blue, and 'future' is a darker teal. When adding information to each time block, make sure to click the save button so your schedule will save to local storage. Go ahead and reload the page to see that your schedule has been saved! If you need to make any changes, click the delete button to remove the saved information from local storage.
+Open the application by following the deployed link (<link><a href="https://samanthashleyrose.github.io/module05-challenge/">Work Day Scheduler</a></link>) then add your schedule for the day! Each hour is color coded for your convivence; 'past' is a faded light blue, 'present' is a solid light blue, and 'future' is a darker teal. When adding information to each time block, make sure to click the save button so your schedule will save to local storage. Go ahead and reload the page to see that your schedule has been saved! If you need to make any changes, click the delete button to remove the saved information from local storage.
 
 ## Credits
 
