@@ -1,4 +1,4 @@
-Work Day Scheduler Application
+# Work Day Scheduler Application
 
 ## Description
 
