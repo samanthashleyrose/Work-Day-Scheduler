@@ -1,4 +1,4 @@
-# module05-challenge - Work Day Scheduler Application
+Work Day Scheduler Application
 
 ## Description
 
