@@ -2,7 +2,7 @@
 
 ### Third-Party APIs Challenge: Work Day Scheduler
 Create a simple calendar application that allows a user to save events for each hour of a typical working day (9am–5pm). This app will run in the browser and feature dynamically updated HTML and CSS powered by jQuery.
-The starter code uses the Day.jsLinks to an external site. library to work with date and time, but feel free to use a different JavaScript solution to handle this functionality.
+The starter code uses the Day.js library to work with date and time, but feel free to use a different JavaScript solution to handle this functionality.
 
 **IMPORTANT**<br>
 Make sure to clone the starter code repository and make your own repository with the starter code. Do not fork the starter code repository!
